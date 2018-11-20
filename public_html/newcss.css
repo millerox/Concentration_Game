@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 1, 2018, 4:15:33 PM
+    Author     : Oksana_Miller
+*/
+
+body{
+    background-image: url('icons/fruits.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div
+{
+   text-align: center;  
+}
+
+button{
+    height:60px;
+    width: 60px;
+    margin: auto;
+    border-radius: 3px;
+    vertical-align: middle;
+    text-align: center;
+    border: inset 1px white;
+    background-color: whitesmoke;
+}
+
+.table-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+}
+p{
+    margin: 0;
+}
+span{
+    background-color: whitesmoke;
+}

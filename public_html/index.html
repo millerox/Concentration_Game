@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        <link rel="stylesheet" href="newcss.css" type="text/css">  
+    </head>
+    <body>
+        <div class="table-wrapper">
+        <div>
+            <p id="gamename"> CONCENTRATION GAME </p>
+            <div id="timer">
+                <p>You have 2 min to win the game: <span id="minutes"> </span>:<span id="seconds"> </span></p>
+                <p>But you can <a href='#' onclick='window.location.reload(true)'>start again</a> at any time</p>
+            </div>
+        </div>
+            <br>
+            <div class="row">
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+            </div>
+            <div class="row">
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+            </div>
+            <div class="row">
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+            </div>
+            <div class="row">
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+            </div>
+            <div class="row">
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+            </div>
+            <div class="row">
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+                <button> </button>
+            </div>
+            <p>Attempts: <span id="turn"></span></p>    
+        </div>
+        <script type="text/javascript" src="Timer-Class.js"></script>
+        <script type="text/javascript" src="Card-Class.js"></script>
+        <script type="text/javascript" src="Board-Class.js"></script>
+        <script type="text/javascript" src="ImgHandler-Class.js"></script>
+        <script type="text/javascript" src="Mediator-Class.js"></script>
+    </body>
+</html>
