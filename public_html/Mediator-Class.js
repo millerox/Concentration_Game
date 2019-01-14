@@ -11,6 +11,7 @@ var turnCount = 0;
 var card1 = null;
 var card2 = null; 
 // timers for both global cards accordingly
+
 var timer1, timer2; 
 
 //ImgHandler class is responsible for distributing images
@@ -21,42 +22,50 @@ var arrOfButtons = document.getElementsByTagName("BUTTON"); //HTML collection
 var arrOfBtns = convertToArray(arrOfButtons);              // "true" array
 var arrOfImages = img.populateArrayOfImages();                 
 
-// create the Board with card-objects & timer
+// create the Board with card-objects
 var board = new Board(CardQuantity,arrOfBtns,arrOfImages);
 var timer = new Timer();
-var time = timer.countdown(2.2);
 
-// show all the images at the beggining & hide them in 5 secs
-for (var i=0; i<board.arrOfCards.length; i++)
-{
-    let card = board.arrOfCards[i];
-    card.showImage();
-}
-setTimeout(function hide(){
+// Display Rules in Pop-up Window
+window.onload = displayRules();
+
+function startGame(){
+    //Run Timer
+    var time = timer.countdown(2.2);
+
+    // show all the images at the beggining & hide them in 5 secs
     for (var i=0; i<board.arrOfCards.length; i++)
     {
         let card = board.arrOfCards[i];
-        card.hideImage();
+        card.showImage();
     }
-},10000);
+    setTimeout(function hide(){
+        for (var i=0; i<board.arrOfCards.length; i++)
+        {
+            let card = board.arrOfCards[i];
+            card.hideImage();
+        }
+    },10000);
 
-//disable buttons when the timer is over
-var b_TimeIsOver = false;
-var b_Win = false;
+    //disable buttons when the timer is over
+    var b_TimeIsOver = false;
+    var b_Win = false;
 
-setInterval(function(){
-    if(b_TimeIsOver === true)
-    {
-        board.disableButtons();
-    }
-},1000);
-//disable timer if there is a win
-setInterval(function(){
-    if(b_Win === true)
-    {
-        clearInterval(time);
-    }
-},1000);
+    setInterval(function(){
+        if(b_TimeIsOver === true)
+        {
+            board.disableButtons();
+        }
+    },1000);
+    //disable timer if there is a win
+    setInterval(function(){
+        if(b_Win === true)
+        {
+            clearInterval(time);
+        }
+    },1000);
+
+}
 
 function deleteButtonFromArray(btn){
     for( var i=0; i < arrOfBtns.length; i++)

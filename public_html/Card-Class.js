@@ -12,7 +12,7 @@ class Card{
     }
 
     showImage(){
-        this.button.innerHTML = "<img src='" + this.image.src + "' style='height:50px;width;50px;'>";
+        this.button.innerHTML = "<img src='" + this.image.src  + "'>";
         this.button.disabled = true; 
     }
     

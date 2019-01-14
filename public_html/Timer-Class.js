@@ -41,9 +41,8 @@ class Timer{
             {
               document.getElementById("gamename").innerHTML = "<p>GAME OVER</p>";
               document.getElementById("timer").innerHTML = "<a href='#' onclick='window.location.reload(true)'>Start again</a>";
-              b_TimeIsOver = true;
+              b_Time = true;
             }
         }
-        return timer;
     }
 }

@@ -10,17 +10,46 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-        <link rel="stylesheet" href="newcss.css" type="text/css">  
+        <link rel="stylesheet" href="newcss.css" type="text/css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="table-wrapper">
-        <div>
-            <p id="gamename"> CONCENTRATION GAME </p>
-            <div id="timer">
-                <p>You have 2 min to win the game: <span id="minutes"> </span>:<span id="seconds"> </span></p>
-                <p>But you can <a href='#' onclick='window.location.reload(true)'>start again</a> at any time</p>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Welcome to the Memory Game !</h2>
+                </div>
+                <br>
+                <div class="modal-body">
+                  <p>PLEASE READ the INSTRUCTIONS before YOU START</p>
+                  <br>
+                  <p>When you close this window, the Game will start.</p>
+                  <p>
+                    Initially, all the cards will be open for 10secs. Try to memorize them. 
+                    After 10secs cards will flip, and you'll have 2min to win the game.
+                    To win, you have to open all the cards again. Click a card to open it.
+                    Cards will stay open ONLY if you choose two cards with the same picture coherently.
+                    Otherwise, cards will flip back. 
+                  </p>
+                  <br>
+                </div>
+                <div class="modal-footer">
+                   <h3>Good luck!</h3>
+                </div>
             </div>
         </div>
+        <div class="table-wrapper">
+            <div id="gameheader">
+                <p id="gamename"> CONCENTRATION GAME </p>
+                <div id="timer">
+                    <p>You have 10secs to remember cards & 2min to win the game: <em id="minutes"> </em>:<em id="seconds"> </em></p>
+                    <p>But you can <a href='#' onclick='window.location.reload(true)'>start again</a> at any time</p>
+                </div>
+            </div>       
             <br>
             <div class="row">
                 <button> </button>
@@ -72,6 +101,7 @@ and open the template in the editor.
             </div>
             <p>Attempts: <span id="turn"></span></p>    
         </div>
+        <script type="text/javascript" src="Modal-Window.js"></script>
         <script type="text/javascript" src="Timer-Class.js"></script>
         <script type="text/javascript" src="Card-Class.js"></script>
         <script type="text/javascript" src="Board-Class.js"></script>
