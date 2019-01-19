@@ -10,7 +10,6 @@ and open the template in the editor.
 
 body{
     background-image: url('icons/fruits.jpg');
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -117,7 +116,23 @@ em{
   background-color: orange;
   color: white;
 }
+.github-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.github {
+  background-color: orange;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+}
 
+.github:focus,
+.github:hover {
+  background-color: darkorange;
+  color: White;
+}
 @media only screen and (max-width: 480px) {
     button{
         height:50px;
